@@ -1,5 +1,7 @@
 package com.ify.co;
 
+import com.ify.co.kitchen.Cook;
+
 public class Restaurant {
 
     public static void main(String[] args) {
@@ -8,5 +10,7 @@ public class Restaurant {
         tablet.createOrder();
         tablet.createOrder();
         tablet.createOrder();
+        Cook cook = new Cook("Ifeco");
+        tablet.addObserver(cook);
     }
 }
