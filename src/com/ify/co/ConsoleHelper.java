@@ -24,10 +24,10 @@ public class ConsoleHelper {
         Dish [] dishes = Dish.values();
         List<Dish>selectedDishes = new ArrayList<>();
         while(true){
-            writeMessage("Enter a dish from the menu");
+            writeMessage("Enter a dish from the menu or enter exit to finish");
             writeMessage(Dish.allDishesToString());
             String dishName = readString();
-            if(dishName.equalsIgnoreCase("exit")){
+            if(dishName == null || dishName.equalsIgnoreCase("exit")){
                     break;
             }
             String selectedDish = "";
